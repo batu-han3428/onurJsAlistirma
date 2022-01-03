@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+         let seriNo = prompt("XXXX-XXXX-XXXX-XXXX");
+          const islem = () =>{
+           
+            let b = seriNo.split("-");
+          
+
+            let c = b[2].split("").reverse().join("");;
+      
+            
+            if(c === b[0]){
+                console.log("başarılı")
+
+
+                if((b[2]*7).toString().length >= 5){
+                   let u = (b[2]*7).toString().substring(1,5)  
+                
+                   if(u === b[1]){
+                    console.log("başarılı")
+                    let y = 0;
+                    for (let index = 0; index < b.length; index++) {
+                       y+= Number(b[index]);                      
+                    }
+                    if(y === 20000){
+                        console.log("başarılı")
+                    }else{
+                        console.warn('sayıların toplamı 20 binin katı değil')
+                        alert('sayıların toplamı 20 binin katı değil')
+                    }
+                   }else{
+                    console.warn('2. grup, 3. grubun 7 ile çarpımmı değil')
+                    alert('2. grup, 3. grubun 7 ile çarpımmı değil')
+                   }
+                 
+                }else if((b[2]*7).toString() === b[1]){
+                    console.log("başarılı")
+                    let y = 0;
+                    for (let index = 0; index < b.length; index++) {
+                       y+= Number(b[index]);                      
+                    }
+                    if(y === 20000){
+                        console.log("başarılı")
+                    }else{
+                        console.warn('sayıların toplamı 20 binin katı değil')
+                        alert('sayıların toplamı 20 binin katı değil')
+                    }
+                }else{
+                    console.warn('2. grup, 3. grubun 7 ile çarpımmı değil')
+                    alert('2. grup, 3. grubun 7 ile çarpımmı değil')
+                }
+            }else{
+                console.warn("3. grup 2 nin tersi değil")
+                alert('3. grup 2 nin tersi değil')
+            }
+        }
+       
+        if (seriNo != null) {    
+            islem();
+        }
+  
+        
+    </script>
+</body>
+</html>
