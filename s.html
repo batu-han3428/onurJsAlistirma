@@ -31,7 +31,7 @@
                     for (let index = 0; index < b.length; index++) {
                        y+= Number(b[index]);                      
                     }
-                    if(y === 20000){
+                    if((y%2) === 0){
                         console.log("başarılı")
                     }else{
                         console.warn('sayıların toplamı 20 binin katı değil')
@@ -48,7 +48,8 @@
                     for (let index = 0; index < b.length; index++) {
                        y+= Number(b[index]);                      
                     }
-                    if(y === 20000){
+                    
+                    if((y%2) === 0){
                         console.log("başarılı")
                     }else{
                         console.warn('sayıların toplamı 20 binin katı değil')
